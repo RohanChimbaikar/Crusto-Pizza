@@ -2,14 +2,13 @@
 
 A modern pizza ordering web application built with **React**, **Redux Toolkit**, **React Router**, and **Tailwind CSS**. Crusto lets users browse a pizza menu, manage their cart, place orders, detect their delivery address, and track order status.
 
+## 🚀 Live Demo
+
+👉 **[Visit Crusto Pizza](https://rohanchimbaikar.github.io/Crusto-Pizza/)**
+
 ## 🎥 Demo
 
-
-
 https://github.com/user-attachments/assets/49025f11-7e50-4865-8d32-8489439d085c
-
-
-
 
 ## ✨ Features
 
@@ -187,11 +186,7 @@ Each cart item contains information such as:
 
 ```js
 {
-  pizzaId,
-  name,
-  quantity,
-  unitPrice,
-  totalPrice
+  (pizzaId, name, quantity, unitPrice, totalPrice);
 }
 ```
 
@@ -272,7 +267,6 @@ Some features that could be added in the future:
 **Rohan Chimbaikar**
 
 - GitHub: [RohanChimbaikar](https://github.com/RohanChimbaikar)
-
 
 ---
 
