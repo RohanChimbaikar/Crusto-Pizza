@@ -13,40 +13,45 @@ import AppLayout from './ui/AppLayout';
 import Cart from './features/cart/Cart';
 import Error from './ui/Error';
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      element: <AppLayout />,
+      errorElement: <Error />,
+      children: [
+        {
+          path: '/',
+          element: <Home />,
+        },
+        {
+          path: '/menu',
+          element: <Menu />,
+          loader: menuLoader,
+          errorElement: <Error />,
+        },
+        {
+          path: '/order/new',
+          element: <CreateOrder />,
+          action: createOrderAction,
+        },
+        {
+          path: '/order/:orderId',
+          element: <Order />,
+          loader: orderLoader,
+          errorElement: <Error />,
+          action: UpdateOrder,
+        },
+        {
+          path: '/cart',
+          element: <Cart />,
+        },
+      ],
+    },
+  ],
   {
-    element: <AppLayout />,
-    errorElement: <Error />,
-    children: [
-      {
-        path: '/',
-        element: <Home />,
-      },
-      {
-        path: '/menu',
-        element: <Menu />,
-        loader: menuLoader,
-        errorElement: <Error />,
-      },
-      {
-        path: '/order/new',
-        element: <CreateOrder />,
-        action: createOrderAction,
-      },
-      {
-        path: '/order/:orderId',
-        element: <Order />,
-        loader: orderLoader,
-        errorElement: <Error />,
-        action: UpdateOrder,
-      },
-      { path: '/cart', element: <Cart /> },
-    ],
+    basename: import.meta.env.PROD ? '/Crusto-Pizza' : '/',
   },
-  {
-    basename: '/Crusto-Pizza',
-  },
-]);
+);
 
 const App = () => {
   return <RouterProvider router={router}></RouterProvider>;
