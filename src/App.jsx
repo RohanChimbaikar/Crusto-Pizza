@@ -12,7 +12,6 @@ import Order, { loader as orderLoader } from './features/order/Order';
 import AppLayout from './ui/AppLayout';
 import Cart from './features/cart/Cart';
 import Error from './ui/Error';
-import UpdateOrderPriority from './features/order/UpdateOrderPriority';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +42,9 @@ const router = createBrowserRouter([
       },
       { path: '/cart', element: <Cart /> },
     ],
+  },
+  {
+    basename: '/Crusto-Pizza',
   },
 ]);
 
