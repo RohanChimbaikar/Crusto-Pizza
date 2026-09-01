@@ -10,7 +10,7 @@ function Home() {
       {/* Hero */}
       <div className="mx-auto max-w-3xl">
         <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-red-600">
-          Welcome to Fast Pizza
+          Welcome to Crusto Pizza
         </p>
 
         <h1 className="mb-6 font-semibold text-stone-800">
