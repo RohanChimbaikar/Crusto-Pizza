@@ -3,7 +3,11 @@ import React from 'react';
 const Logo = () => {
   return (
     <div className="w-50 flex items-center gap-x-2">
-      <img src="/Logo.svg" className="h-16" alt="" />
+      <img
+        src={`${import.meta.env.BASE_URL}Logo.svg`}
+        className="h-16"
+        alt="Crusto logo"
+      />
       <div className="flex flex-col">
         <h1 className="text-lg font-extrabold leading-tight tracking-wide sm:text-xl">
           Crusto
