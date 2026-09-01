@@ -12,7 +12,8 @@ function EmptyCart() {
       <div className="flex h-[70%] items-center justify-center">
         <img
           className="h-60 sm:h-72 md:h-80"
-          src="/empty.svg"
+
+          src={`${import.meta.env.BASE_URL}empty.svg`}
           alt="Empty cart"
         />
       </div>
